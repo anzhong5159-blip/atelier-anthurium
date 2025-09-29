@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+margin: 0;
+padding: 0;
+}
+
+img{
+max-width: 100%;
+height: auto;
+vertical-align: bottom;
+}
+
+iframe{
+vertical-align: bottom;
+}
+
+body{
+min-width: 1180px;
+}
+
+.container{
+width: 1080px;
+margin: 0 auto;
+}
+
+main {
+  margin-top: 80px; /* headerの高さ分だけ下げる */
+}
+
+header{
+/*background-color: #cfc;*/
+height: 80px;
+display: flex;
+align-items: center;
+position: fixed;   /* ← 固定 */
+  top: 0;            /* 上に貼り付け */
+  left: 0;
+z-index: 1000;     /* コンテンツより前に出す */
+background-color: #fff;  /* 背景色を付けないと下の要素が透けます */
+width: 100%;       /* 横幅いっぱい */
+}
+
+header .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+h1{
+width: 150px;
+/*background-color: #ff9;*/
+}
+
+h1 img{
+/*background-color: #00c;*/
+}
+
+nav{
+/*background-color: #ccf;*/
+}
+
+nav ul{
+display: flex;
+list-style: none;
+}
+
+nav a{
+color: #000;
+text-decoration: none;
+padding: 20px;
+/*background-color: #f3f;*/
+display: block;
+}
+
+nav a:hover{
+background-color: #f6efeb;
+}
+
+.main-visual{
+background-color: #cf3;
+background-image: url("../images/main-visual.jpg");
+/*height: 720px;*/
+
+height: calc(100vh);
+min-height: 540px;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+/* 最初は透明＋縮小 */
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 1.5s ease-out forwards;
+}
+
+.main-visual h2{
+color: #fff;
+font-size: 54px;
+font-weight: normal;
+font-family: "HG丸ｺﾞｼｯｸM-PRO";
+
+opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 1.8s ease-out forwards;
+  animation-delay: 0.3s; /* 背景より少し遅れて */
+}
+/* アニメーションの定義 */
+/* 中心から拡大しつつフェードイン */
+@keyframes fadeInScale {
+  0%   { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 左からフェードイン */
+/*@keyframes fadeInLeft {
+  0%   { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}*/
+/*@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}*/
+
+
+.tag a{
+background-color: #c7b299;
+color: #fff;
+text-decoration: none;
+padding: 10px 20px;
+}
+
+.tag a:hover{
+background-color: #f7c376;
+}
+
+section h2{
+margin-bottom: 80px;
+text-align: center;
+font-size: 46px;
+color: #d4c38e;
+}
+
+section p{
+margin-bottom: 15px;
+text-align: left;
+font-size: 15px;
+}
+
+.seasons{
+text-align: center;
+}
+
+.tag{
+text-align: right;
+}
+
+.bnr{
+/*background-color: #ccc;*/
+padding: 80px 0;
+}
+
+.bnr ul{
+display: flex;
+list-style: none;
+justify-content: space-between;
+}
+
+.bnr ul li a:hover img {
+animation: bnr-wobble 0.45s ease both; /* 1回だけ */
+}
+
+.media{
+padding: 120px 0;
+/*background-color: #ffc;*/
+}
+
+.mediaCard{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.mediaCard__video{
+background-color: #cfc;
+width: 640px;
+}
+
+.mediaCard__video iframe{
+width: 640px;
+height: 360px;
+}
+
+.mediaCard__text{
+/*background-color: #f99;*/
+width: 400px;
+}
+
+.media h2{
+margin-bottom: 20px;
+}
+
+.seasons{
+padding-bottom: 5px;
+}
+
+.works{
+padding: 120px 0;
+background-color: #f6efeb;
+}
+
+.worksList{
+display: flex;
+list-style: none;
+justify-content: space-between;
+}
+
+.worksList li{
+width: 300px;
+}
+
+.worksList__image{
+width: 240px;
+border-radius: 50%;
+overflow: hidden;
+margin: 0 auto 30px;
+}
+
+.works h2{
+font-family: "Avenir Next Italic";
+font-style: italic;
+}
+
+.works-title{
+text-align: center;
+}
+
+.works-title .title-en{
+font-family: "Avenir Next Italic";
+font-style: italic;
+}
+
+.works-title .title-ja{
+font-size: 30px;
+margin-left: 8px;
+font-weight: normal;
+font-style: normal;
+}
+.worksList h3{
+text-align: center;
+margin-bottom: 16px;
+color: #d4c38e;
+font-size: 30px;
+font-family: "Avenir Next Italic";
+font-style: italic;
+}
+
+.worksList p{
+padding-left: 10px;
+}
+
+.gallery{
+padding: 120px 0;
+/*background-color: #cfc;*/
+}
+
+.gallery-title{
+text-align: center;
+}
+
+.gallery-title .title-en{
+font-family: "Avenir Next Italic";
+font-style: italic;
+}
+
+.gallery-title .title-ja{
+font-size: 30px;
+margin-left: 8px;
+font-weight: normal;
+font-style: normal;
+}
+
+.gallery__slider .slick-slide/*li*/{
+width: 560px;
+margin: 0 30px; 
+}
+
+footer{
+background-color: #555;
+padding: 60px 0;
+color: #fff;
+}
+
+.footerCard{
+display: flex;
+justify-content:center;
+align-items: center;
+gap: 40px;
+}
+
+.footerCard__logo{
+width: auto;
+max-width: 300px;
+}
+
+.footerCard__text{
+width:auto; 
+text-align: left;
+}
+
+footer ul{
+display: flex;
+list-style: none;
+justify-content: center;
+padding-left: 210px;
+}
+
+footer a{
+padding: 0 10px;
+}
+.copyright{
+text-align: center;
+margin: 30px 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
